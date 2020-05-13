@@ -5,10 +5,12 @@ Invite [here](https://discord.com/api/oauth2/authorize?client_id=710030128381427
 
 
 ## Self Hosting 
-1. Clone this repository
-2. Make sure you have rust installed (If not go [here](https://rustup.rs) to install)
-3. `cd` into repository
-4. Create a `config.json` in the root of the repository 
+
+1. Install `gcc`
+2. Clone this repository
+3. Make sure you have rust installed (If not go [here](https://rustup.rs) to install)
+4. `cd` into repository
+5. Create a `config.json` in the root of the repository 
 ```js
   {
    "token": "<YOUR BOT TOKEN HERE>",
@@ -16,4 +18,4 @@ Invite [here](https://discord.com/api/oauth2/authorize?client_id=710030128381427
     "shards": 1 // <- This could be any number [REMOVE THIS COMMENT]
   }
 ```
-5. Run `cargo run` or `cargo build` to build for your operating system
+6. Run `cargo run` or `cargo build` to build for your operating system
