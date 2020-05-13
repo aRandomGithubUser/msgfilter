@@ -1,7 +1,7 @@
 # MsgFilter
 ### A simple bot to filter messages that contain bad words
 
-Invite [here](https://discord.com/api/oauth2/authorize?client_id=710030128381427813&permissions=8192&scope=bot)
+Invite [here](https://bit.ly/msgfilter)
 
 
 ## Self Hosting 
@@ -18,4 +18,5 @@ Invite [here](https://discord.com/api/oauth2/authorize?client_id=710030128381427
     "shards": 1 // <- This could be any number [REMOVE THIS COMMENT]
   }
 ```
-6. Run `cargo run` or `cargo build` to build for your operating system
+6. Run `cargo run` or `cargo build --release` to build for your operating system
+7. If you used cargo build, move the binary in `./target/release/msg-filter` into the root of the repo

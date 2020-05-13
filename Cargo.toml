@@ -1,6 +1,6 @@
 [package]
-name = "rust-swearfilter-bot"
-version = "0.1.0"
+name = "msg-filter"
+version = "0.1.3"
 authors = ["aRandomGithubUser"]
 edition = "2018"
 
