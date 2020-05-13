@@ -8,7 +8,7 @@ use json::JsonValue;
 
 pub fn read_config() -> JsonValue {
 
-    let contents = read_to_string("config.json").expect("Make sure you have a config.yml at the root of this app");
+    let contents = read_to_string("config.json").expect("Make sure you have a config.json at the root of this app");
     let config = parse(&contents.to_string()).unwrap();
     return config;
 }
