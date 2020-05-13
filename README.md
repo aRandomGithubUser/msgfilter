@@ -1,4 +1,5 @@
 # MsgFilter
+![Rust](https://github.com/aRandomGithubUser/msgfilter/workflows/Rust/badge.svg)
 ### A simple bot to filter messages that contain bad words
 
 Invite [here](https://bit.ly/msgfilter)
