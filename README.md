@@ -14,7 +14,7 @@ Invite [here](https://bit.ly/__msgfilter)
 5. Create a `config.json` in the root of the repository 
 ```js
   {
-   "token": "<YOUR BOT TOKEN HERE>",
+    "token": "<YOUR BOT TOKEN HERE>",
     "prefix": "<YOUR DESIRED PREFIX>",
     "shards": 1 // <- This could be any number [REMOVE THIS COMMENT]
   }

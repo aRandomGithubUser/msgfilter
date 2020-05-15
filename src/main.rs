@@ -15,6 +15,10 @@ impl EventHandler for Handler {
         if msg.author.bot == true {
             return
         }
+        if msg.channel(&ctx.cache).unwrap().is_nsfw() == true {
+            return
+        }
+        
         let config = lib::read_config();
         let prefix = config["prefix"].to_string();
         if msg.content == format!("{}ping", &prefix) {
