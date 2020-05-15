@@ -18,12 +18,13 @@ impl EventHandler for Handler {
         if msg.channel(&ctx.cache).unwrap().is_nsfw() == true {
             return
         }
-        
+
         let config = lib::read_config();
         let prefix = config["prefix"].to_string();
         if msg.content == format!("{}ping", &prefix) {
+            let response_message = format!("Response: {}\nShardID: {}", "\'Pong!\'", &ctx.shard_id);
             // Ping Command
-            if let Err(why) = msg.channel_id.say(&ctx.http, format!("Pong!")) {
+            if let Err(why) = msg.channel_id.say(&ctx.http, format!("```yaml\n{}```", response_message)) {
                 println!("Error sending message: {:?}", why);
             }
         }
@@ -33,7 +34,7 @@ impl EventHandler for Handler {
     fn ready(&self, ctx: Context, ready: Ready) {
         let activity = Activity::playing("with messages");
         ctx.set_presence(Some(activity), OnlineStatus::DoNotDisturb);
-        println!("[INFO] {}#{} is connected! [Shard: {}/{}]", ready.user.name, ready.user.discriminator, ready.shard.unwrap()[0] + 1, ready.shard.unwrap()[1]);
+        println!("[INFO] {}#{} is connected! [Shard: {}/{}]", ready.user.name, ready.user.discriminator, ready.shard.unwrap()[0] + 1, ready.shard.unwrap().len());
     }
 }
 

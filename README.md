@@ -1,11 +1,11 @@
 # MsgFilter
 ![Rust](https://github.com/aRandomGithubUser/msgfilter/workflows/Rust/badge.svg)
-### A simple bot to filter messages that contain bad words
+### A stable and simple bot to filter messages that contain bad words
 
 Invite [here](https://bit.ly/__msgfilter)
 
 
-## Self Hosting 
+## Self Hosting (Linux Only) 
 
 1. Install `gcc`
 2. Clone this repository
@@ -19,6 +19,5 @@ Invite [here](https://bit.ly/__msgfilter)
     "shards": 1 // <- This could be any number [REMOVE THIS COMMENT]
   }
 ```
-6. Run `cargo run` or `cargo build --release` to build for your operating system
-7. If you used cargo build, move the binary compiled in `./target/release/msg-filter` into the root of the repo
-8. Run the binary!
+6. Run `./start.sh`
+

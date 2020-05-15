@@ -1,0 +1,1 @@
+cargo build --release && cp ./config.json ./target/release/ && ./target/release/msg-filter

@@ -19,9 +19,12 @@ pub fn check_for_profanity(ctx: &Context, msg: &Message) {
     
     let regex_extra: Regex = Regex::new(r"(?:^|\W)(fuck|ass|shit|fucker|motherfucker|fk|fuk|fuc|dong|dick|penis|sex|vulva|vagina|dick|cock)(?:$|\W)").unwrap(); 
     if censor.check(&msg.content)|| regex_extra.is_match(&msg.content) {
-        msg.channel_id.say(&ctx.http, format!(" Profane content from `{}#{}` (`{}`) removed.", &msg.author.name, &msg.author.discriminator, &msg.author.id)).unwrap();
         if let Err(why) = msg.delete(&ctx.http) {
             println!("Error: {:?}", why);
+            msg.channel_id.say(&ctx.http, format!("An error occurred: `{:?}`", why)).unwrap();
+        }
+        else {
+            msg.channel_id.say(&ctx.http, format!("Profane content from `{}#{}` (`{}`) removed.", &msg.author.name, &msg.author.discriminator, &msg.author.id)).unwrap();
         }
     }
 }
