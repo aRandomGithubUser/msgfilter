@@ -20,4 +20,4 @@ Invite [here](https://bit.ly/__msgfilter)
   }
 ```
 6. Run `./start.sh`
-
+7. You're done!
