@@ -30,6 +30,6 @@ pub fn check_for_profanity(ctx: &Context, msg: &Message) {
 }
 
 fn censor_filter() -> Censor {
-    return Censor::Standard + Censor::Sex - "ass" + "dong";
+    return Censor::Standard + Censor::Sex - "ass" - "fetish" + "dong";
 }
 
